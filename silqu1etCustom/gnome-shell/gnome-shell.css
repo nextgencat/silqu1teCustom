@@ -1,0 +1,511 @@
+/* --------------------------------------------------------------------- */
+/* - 																	 */
+/* - 																	 */
+/* -- THIS THEME IS KINDA FORK OF "Transparent Shell Theme" by madcap -- */
+/* -                                                                     */
+/* - 																	 */
+/* --------------------------------------------------------------------- */
+
+/* -------- CUSTOM SHOW-APPS ICON -------- */
+
+.show-apps .show-apps-icon {
+	border: none;
+	background-image: url("file:///home/silqu1et/.local/share/icons/MacTahoe/actions/symbolic/view-app-grid-symbolic.svg");
+	background-size: contain;
+	color: transparent; 
+}
+
+/* -------- DASH -------- */
+
+#dash .app-well-app:hover .overview-icon,
+#dash .app-well-app:focus .overview-icon,
+#dash .app-well-app:selected .overview-icon,
+#dash .show-apps:hover .overview-icon,
+#dash .show-apps:focus .overview-icon,
+#dash .dash-item-container .overview-tile:hover .overview-icon,
+/* 46+ */
+#dash .dash-item-container .overview-tile:focus .overview-icon,
+/* 46+ */
+#dash .dash-item-container .overview-tile:selected .overview-icon,
+/* 46+ */
+#dash .dash-item-container .show-apps:checked .overview-icon {
+	box-shadow: inset 0 0 4px 1px rgba(191, 191, 191, 0.4);
+	background-color: rgba(48, 48, 48, 0.4);
+}
+
+#dash .dash-background {
+	background-color: rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 0 0 1px rgba(104, 104, 104, 0.5);
+	border: none;
+	/* remove black border on ubuntu */
+	padding: 4px 2px 4px 2px;
+	border-radius: 23px;
+}
+
+/* -------- TOP PANEL -------- */
+
+#panel {
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(73, 73, 73, 0.5);
+	height: 34px;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+.panel-button {
+	-natural-hpadding: 6px !important;
+	background-color: rgba(32, 32, 32, 0.2);
+	border-radius: 10px;
+}
+
+.panel-button:hover,
+.panel-button:hover .clock,
+.panel-button:active,
+.panel-button:active .clock {
+	background-color: rgba(48, 48, 48, 0.4);
+}
+
+/* -------- BUTTONS -------- */
+
+.button {
+	color: rgba(242, 242, 242, 1);
+	background-color: rgba(217, 217, 217, 0.08);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	transition-duration: 100ms;
+}
+
+.button:insensitive {
+	box-shadow: none;
+	color: rgba(242, 242, 242, 0.67);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.button:hover,
+.button:active {
+	background-color: rgba(217, 217, 217, 0.13);
+}
+
+.button:focus {
+	background-color: rgba(66, 66, 66, 0.2);
+	box-shadow: inset 0 0 0 2px rgba(191, 191, 191, 1) !important;
+}
+
+/* clear button */
+.message-list-clear-button {
+	padding: 4px 20px;
+	border-radius: 9px;
+}
+
+.message-list-clear-button:insensitive {
+	background-color: rgba(64, 64, 64, 0.2);
+}
+
+/* -------- QUICK SETTINGS PANEL -------- */
+
+.quick-settings {
+	background-color: rgba(10, 10, 10, 0.8);
+	border: 1px solid rgba(73, 73, 73, 0.5);
+}
+
+.icon-button {
+	background-color: rgba(71, 71, 71, 0.4);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	color: rgba(242, 242, 242, 1);
+	transition-duration: 100ms;
+	border-radius: 99px;
+}
+
+.icon-button:hover {
+	background-color: rgba(100, 100, 100, 0.4);
+}
+
+.quick-toggle,
+/* 43 */
+.quick-menu-toggle .quick-toggle,
+/* 44-47 */
+.quick-toggle-has-menu .quick-toggle {
+	/* 48+ */
+	color: rgba(242, 242, 242, 1);
+	border-radius: 14px;
+	background-color: rgba(71, 71, 71, 0.4);
+	transition-duration: 100ms;
+}
+
+.quick-toggle:hover,
+.quick-menu-toggle .quick-toggle:hover,
+.quick-menu-toggle .quick-toggle-arrow:hover,
+.quick-toggle-has-menu .quick-toggle:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:hover {
+	color: rgba(242, 242, 242, 1);
+	background-color: rgba(85, 85, 85, 0.4);
+}
+
+.quick-toggle:checked,
+.quick-menu-toggle .quick-toggle:checked,
+.quick-menu-toggle .quick-toggle-arrow:checked,
+.quick-toggle-has-menu .quick-toggle:checked,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	/* some distributions may have gradient by default (aka Zorin OS) */
+	background-gradient-start: rgb(255, 255, 255);
+	background-gradient-end: rgb(255, 255, 255);
+
+	box-shadow: 0 0 15px rgba(255,255,255, 0.4);
+
+	border-color: transparent;
+}
+
+.quick-toggle-has-menu .quick-toggle-separator {
+	width: 0;
+}
+
+.quick-toggle .quick-toggle-label {
+	font-weight: 600;
+}
+
+.quick-menu-toggle .quick-toggle:ltr,
+.quick-toggle-has-menu .quick-toggle:ltr {
+	border-radius: 14px 0 0 14px;
+}
+
+.quick-menu-toggle .quick-toggle:rtl,
+.quick-toggle-has-menu .quick-toggle:rtl {
+	border-radius: 0 14px 14px 0;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:ltr,
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr {
+	border-radius: 0 14px 14px 0;
+	border-left-width: 2px;
+}
+
+.quick-menu-toggle .quick-toggle-arrow:rtl,
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl {
+	border-radius: 14px 0 0 14px;
+	border-right-width: 2px;
+}
+
+.quick-slider .slider-bin {
+	padding: 4px;
+	margin: 0;
+	color: rgba(242, 242, 242, 1);
+	/* up tp 46 */
+	border-radius: 99px;
+}
+
+.quick-slider .slider-bin:focus {
+	background-color: rgba(217, 217, 217, 0.08);
+}
+
+/* quick slider icon */
+.quick-slider .icon-button {
+	background-color: transparent;
+	box-shadow: none;
+	padding: 6px;
+	border-radius: 50%;
+	transition-duration: 150ms;
+}
+
+.quick-slider .icon-button:hover {
+	background-color: rgba(217, 217, 217, 0.08);
+	color: rgba(242, 242, 242, 1);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.quick-toggle-menu {
+	background-color: rgba(26, 26, 26, 0.8) !important;
+	color: rgba(242, 242, 242, 1) !important;
+	border-radius: 16px;
+	padding: 10px;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	margin: 12px 12px 0;
+}
+
+.quick-toggle-menu .header .icon {
+	background-color: rgba(217, 217, 217, 0.13);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+	icon-size: 1.4em;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.quick-toggle-menu .popup-menu-item {
+	border-radius: 10px;
+}
+
+/* connect / disconnect text color (expanded menu) */
+.device-subtitle {
+	color: rgba(242, 242, 242, 0.67);
+}
+
+/* -------- DATE & TIME -------- */
+
+#calendarArea {
+	padding: 0;
+}
+
+/* set padding here instead of #calendarArea for GNOME older than 46 */
+.datemenu-popover {
+	padding: 8px;
+}
+
+/* padding property for older gnome versions */
+.datemenu-calendar-column:ltr {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.datemenu-calendar-column:rtl {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.datemenu-calendar-column,
+/* Calendar menu side column */
+.datemenu-calendar-column .datemenu-displays-box {
+	/* widgets below calendar */
+	spacing: 8px;
+}
+
+
+/* today header button */
+.datemenu-today-button {
+	color: rgba(242, 242, 242, 0.67);
+	background-color: none;
+	border-radius: 12px;
+	margin: 0;
+}
+
+.datemenu-today-button:hover {
+	transition-duration: 100ms;
+	background-color: rgba(64, 64, 64, 0.2);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+.datemenu-today-button:focus {
+	transition-duration: 100ms;
+	background-color: rgba(66, 66, 66, 0.2);
+	box-shadow: inset 0 0 0 2px rgba(191, 191, 191, 1) !important;
+}
+
+/* weekday label */
+.day-label {
+	color: rgba(242, 242, 242, 0.67);
+	font-weight: 600;
+}
+
+/* date label */
+.date-label {
+	color: rgba(242, 242, 242, 0.67);
+	font-weight: 700;
+}
+
+/* -------- POP UP MENU'S -------- */
+
+.popup-menu-content {
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	background-color: rgba(10, 10, 10, 0.8);
+	border: 1px solid rgba(73, 73, 73, 0.5);
+}
+
+/* -------- POP UP MENU'S -------- */
+/* -------> message-list           */
+
+.message-list .message,
+.popup-menu-content .message,
+.message-view .message {
+    border-radius: 18px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+	background-color: rgba(26, 26, 26, 0.8);
+	border: 1px solid rgba(73, 73, 73, 0.5);
+}
+
+.message-list .message:hover {
+	background-color: rgba(43, 43, 43, 0.8);
+	transition: 120ms;
+}
+
+.message-list .message:focus {
+	background-color: rgba(43, 43, 43, 0.8);
+	box-shadow: inset 0 0 0 2px rgba(191, 191, 191, 1) !important;
+}
+
+.message-media-control:hover {
+	background-color: rgba(217, 217, 217, 0.08);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	color: rgba(242, 242, 242, 1);
+}
+
+/* -------- POP UP MENU'S -------- */
+/* -------> popup-menu-item        */
+
+.popup-menu-item:focus,
+.popup-menu-item:hover,
+.popup-menu-item:checked {
+	background-color: rgba(217, 217, 217, 0.08) !important;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+	color: rgba(242, 242, 242, 1);
+}
+
+.popup-menu-item:checked {
+	border-radius: 12px 12px 0 0;
+}
+
+.popup-menu-item:active {
+	background-color: rgba(217, 217, 217, 0.13);
+	color: rgba(242, 242, 242, 1);
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.popup-sub-menu {
+	background-color: rgba(217, 217, 217, 0.08);
+	color: rgba(242, 242, 242, 1);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	border-radius: 0 0 12px 12px;
+	border: none;
+}
+
+/* submenu items */
+.popup-sub-menu .popup-menu-item {
+	margin: 0;
+	color: rgba(242, 242, 242, 1);
+	background-color: transparent;
+	border-radius: 0;
+}
+
+/* make rounded borders for last element */
+.popup-sub-menu .popup-menu-item:last-child {
+	border-radius: 0 0 12px 12px;
+}
+
+.popup-sub-menu .popup-menu-item:hover,
+.popup-sub-menu .popup-menu-item:focus {
+	background-color: rgba(217, 217, 217, 0.13) !important;
+}
+
+.popup-menu-item:insensitive {
+	color: rgba(242, 242, 242, 0.38);
+	margin: 0;
+}
+
+/* all other graphical elements (sliders), OpenWeather Extension */
+.popup-inactive-menu-item {
+	color: rgba(242, 242, 242, 1);
+	background-color: transparent;
+}
+
+.popup-inactive-menu-item:insensitive {
+	color: rgba(242, 242, 242, 0.67) !important;
+}
+
+
+/* -------- POP UP MENU'S -------- */
+/* -------> Calendar               */
+
+.calendar {
+	border-radius: 14px;
+	background-color: rgba(64, 64, 64, 0.2);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+
+	border-color: transparent;
+	padding: 3px;
+	margin: 0;
+}
+
+.calendar-month-header .calendar-month-label {
+	color: rgba(242, 242, 242, 1) !important;
+	padding: 0 !important;
+	/* override because of gdm */
+	background-color: transparent;
+	/* 46+ */
+}
+
+.calendar-month-header .pager-button {
+	height: 2.2em;
+	width: 2.2em;
+}
+
+.calendar-day.calendar-day-heading,
+.calendar .calendar-day-heading {
+	color: rgba(242, 242, 242, 0.67);
+	background-color: rgba(32, 32, 32, 0.4);
+	border-radius: 8px;
+}
+
+.calendar-day,
+.calendar-month-header .pager-button {
+	color: rgba(242, 242, 242, 1);
+	background-color: transparent;
+	/* 46+ */
+	border-radius: 9px;
+	padding: 0;
+	transition-duration: 100ms;
+}
+
+.calendar-day {
+	width: 2.8em;
+	height: 2.8em;
+}
+
+.calendar-day:hover,
+.calendar-day:selected:hover,
+.calendar .calendar-day-heading:hover,
+.calendar .calendar-day-heading:selected:hover,
+.calendar .calendar-month-header .pager-button:hover {
+	background-color: rgba(217, 217, 217, 0.13);
+	color: rgba(242, 242, 242, 1);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.calendar-day:focus,
+.calendar .calendar-day-heading:focus,
+.calendar .calendar-month-header .pager-button:focus {
+	background-color: rgba(66, 66, 66, 0.2);
+	box-shadow: inset 0 0 0 1.5px rgba(191, 191, 191, 1) !important;
+}
+
+.calendar-day:selected,
+.calendar .calendar-day-heading:selected {
+	background: rgba(53, 53, 53, 0.4);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.events-button,
+.world-clocks-button,
+.weather-button {
+	background-color: rgba(64, 64, 64, 0.2);
+	color: rgba(242, 242, 242, 0.67);
+	border-radius: 14px;
+	margin: 0;
+	border-color: transparent;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+	transition-duration: 125ms;
+}
+
+.events-button:hover,
+.world-clocks-button:hover,
+.weather-button:hover {
+	background-color: rgba(217, 217, 217, 0.08);
+}
+
+.events-button:focus,
+.world-clocks-button:focus,
+.weather-button:focus {
+	background-color: rgba(66, 66, 66, 0.2);
+	box-shadow: inset 0 0 0 2px rgba(191, 191, 191, 1) !important;
+}
+
+.events-button:active,
+.world-clock-button:active,
+.weather-button:active {
+	background-color: rgba(217, 217, 217, 0.13);
+}
+
